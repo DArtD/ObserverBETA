@@ -8,6 +8,7 @@ from .get_list_tx import dp
 from .start import dp
 from .doc import dp
 from .get_weather import dp
+from .ID import chat_id
 from .echo import dp
 
 __all__ = ["dp"]
