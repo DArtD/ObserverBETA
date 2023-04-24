@@ -9,16 +9,16 @@ from loader import dp
 
 @dp.message_handler(Command('timetable_next'), IsPrivate())
 async def timetable_next(message: types.Message):
-    dt_day = datetime.datetime.now() + datetime.timedelta(hours=5)
+    dt_day = datetime.datetime.today() + datetime.timedelta(hours=5)
     if 4 <= dt_day.weekday() <= 6:
-        dt_day = 0
+        dt_day_n = 0
     else:
-        dt_day += 1
+        dt_day_n = dt_day.weekday() + 1
 
     timetable = ''
     with open('timetable.json', encoding="utf-8") as f:
         obj1 = f.read()
         obj = json.loads(obj1)
-        for i in obj[str(dt_day)]:
-            timetable += '\n' + obj[str(dt_day)][i] + '\n'
+        for i in obj[str(dt_day_n)]:
+            timetable += '\n' + obj[str(dt_day_n)][i] + '\n'
         await message.answer(timetable)

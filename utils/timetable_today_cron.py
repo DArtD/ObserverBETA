@@ -7,7 +7,7 @@ from utils.get_weather import get_weather
 
 
 async def timetable_today_cron(bot: Bot):
-    dt_day = datetime.datetime.now() + datetime.timedelta(hours=5)
+    dt_day = datetime.datetime.today() + datetime.timedelta(hours=5)
     if 0 <= dt_day.weekday() <= 4:
         timetable = ''
         with open('timetable.json', encoding="utf-8") as f:
