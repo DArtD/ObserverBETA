@@ -9,6 +9,7 @@ from .start import dp
 from .doc import dp
 from .get_weather import dp
 from .ID import chat_id
+from .RGR import rgr
 from .echo import dp
 
 __all__ = ["dp"]

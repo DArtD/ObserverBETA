@@ -1,0 +1,22 @@
+import json
+
+from aiogram import types
+from aiogram.dispatcher.filters.builtin import Command
+
+from filters.IsPrivate import IsPrivate
+from loader import dp
+
+
+@dp.message_handler(Command("РГР"), IsPrivate())
+async def rgr(message: types.Message):
+    count = 0
+    with open('RGRgroup.json', encoding="utf-8") as f:
+        list = 'Варианты по РГР (диффуры)\n'
+        obj1 = f.read()
+        obj = json.loads(obj1)
+
+        for i in obj:
+            count += 1
+            list += f'{count}' + ': ' + obj[i] + "\n"
+
+        await message.answer(list)
