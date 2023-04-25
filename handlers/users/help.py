@@ -26,7 +26,7 @@ async def bot_help(message: types.Message):
     await message.answer('\n'.join(text))
 
 
-@rate_limit(20, 'help')
+@rate_limit(20, 'about_me')
 @dp.message_handler(Command("about_me"), IsPrivate())
 async def about_me(message: types.Message):
     text = [

@@ -15,7 +15,7 @@ async def timetable_today_cron(bot: Bot):
         with open('timetable.json', encoding="utf-8") as f:
             obj1 = f.read()
             obj = json.loads(obj1)
-            if dt == 3 and await UpperLowerweek() == "<b>Верхняя неделя</b>":
+            if dt == 3 and await UpperLowerweek() == "<b>Нижняя неделя</b>":
                 timetable += '\n' + obj["3"]["first_pair"] + '\n' \
                              + obj["3"]["second_pair"] + '\n' + obj["3"]["third_pair"]
             else:
