@@ -30,8 +30,8 @@ async def get_weather():
 
     feels_weather = weather_data["main"]["feels_like"]
     wind = weather_data["wind"]["speed"]
-
-    text = (f"***{datetime.datetime.now().strftime('%d-%m-%Y %H:%M')}***\n"
+    time_now = datetime.datetime.today() + datetime.timedelta(hours=5)
+    text = (f"***{time_now.strftime('%d-%m-%Y %H:%M')}***\n"
             f"Погода в городе: {city}\n"
             f"Температура: {cur_weather}°C {wd}\n"
             f"По ощущениям: {feels_weather}°C\n"
