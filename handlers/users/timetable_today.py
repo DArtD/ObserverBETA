@@ -1,5 +1,6 @@
 import datetime
 import json
+from  utils import UpperLowerweek
 from aiogram.dispatcher.filters import Command
 from aiogram import types
 
@@ -18,6 +19,7 @@ async def timetable_today(message: types.Message):
             obj = json.loads(obj1)
             for i in obj[str(dt)]:
                  timetable += '\n' + obj[str(dt)][i] + '\n'
+            await message.answer(text=await UpperLowerweek())
             await message.answer(timetable)
     else:
         await message.answer("<b>Сегодня нет пар</b>")

@@ -39,7 +39,7 @@ async def get_weather(message: types.Message):
 
     feels_weather = weather_data["main"]["feels_like"]
     wind = weather_data["wind"]["speed"]
-    time_now = datetime.datetime.now() + datetime.timedelta(hours=5)
+    time_now = datetime.datetime.today() + datetime.timedelta(hours=5)
 
     await message.answer(f"***{time_now.strftime('%d-%m-%Y %H:%M')}***\n"
                          f"Погода в городе: {city}\n"
