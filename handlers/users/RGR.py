@@ -19,4 +19,5 @@ async def rgr(message: types.Message):
             count += 1
             list += f'{count}' + ': ' + obj[i] + "\n"
 
+        await dp.bot.send_document(document="РГР-2 (23 гр).pdf", chat_id=message.chat.id)
         await message.answer(list)
