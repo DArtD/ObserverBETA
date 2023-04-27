@@ -5,6 +5,6 @@ from keyboards.inline.choice import choice
 from loader import dp
 
 
-@dp.message_handler(Command("links"))
+@dp.message_handler(Command("Links"))
 async def links(message: types.Message):
     await message.answer(text="Полезные ссылки", reply_markup=choice)
