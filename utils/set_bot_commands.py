@@ -11,7 +11,7 @@ async def set_default_commands(dp):
         types.BotCommand("timetable", " Актуальное расписание"),
         types.BotCommand("timetable_today", "Расписание на сегодня"),
         types.BotCommand("timetable_next", "Расписание на след. учебный день"),
-        types.BotCommand("ргр", "Получить список вариантов РГР"),
+        types.BotCommand("rgr", "Получить список вариантов РГР"),
         types.BotCommand("get_list", "Список группы"),
         types.BotCommand("get_list_tx", "Список группы в сообщении")
     ])

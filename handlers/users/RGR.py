@@ -7,7 +7,7 @@ from filters.IsPrivate import IsPrivate
 from loader import dp
 
 
-@dp.message_handler(Command("РГР"), IsPrivate())
+@dp.message_handler(Command("rgr"), IsPrivate())
 async def rgr(message: types.Message):
     count = 0
     with open('RGRgroup.json', encoding="utf-8") as f:
