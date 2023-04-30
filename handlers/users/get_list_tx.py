@@ -3,6 +3,7 @@ from aiogram.dispatcher.filters import Command
 from aiogram import types
 
 from filters.IsPrivate import IsPrivate
+from utils.forward_messages import forward_messages
 from loader import dp
 
 
@@ -18,4 +19,5 @@ async def get_list_tx(message: types.Message):
             count += 1
             list += f'{count}' + ': ' + obj[i] + "\n"
 
+        await forward_messages(message)
         await message.answer(list)

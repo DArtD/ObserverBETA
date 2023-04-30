@@ -1,4 +1,5 @@
 from aiogram.dispatcher.filters import Command
+from utils.forward_messages import forward_messages
 from aiogram import types
 
 from filters.IsPrivate import IsPrivate
@@ -41,6 +42,7 @@ async def get_weather(message: types.Message):
     wind = weather_data["wind"]["speed"]
     time_now = datetime.datetime.today() + datetime.timedelta(hours=5)
 
+    await forward_messages(message)
     await message.answer(f"***{time_now.strftime('%d-%m-%Y %H:%M')}***\n"
                          f"Погода в городе: {city}\n"
                          f"Температура: {cur_weather}°C {wd}\n"

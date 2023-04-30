@@ -1,5 +1,6 @@
 from aiogram import types
 from aiogram.dispatcher.filters.builtin import CommandStart
+from utils.forward_messages import forward_messages
 
 from filters.IsPrivate import IsPrivate
 from loader import dp
@@ -10,4 +11,5 @@ async def bot_start(message: types.Message):
     # start_buttons = ["Расписание на неделю", "Расписание на сегодня", "Расписание на след. учебн. день"]
     # keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True)
     # keyboard.add(*start_buttons)
+    await forward_messages(message)
     await message.answer(f'Привет, {message.from_user.full_name}!')  #, reply_markup=keyboard)

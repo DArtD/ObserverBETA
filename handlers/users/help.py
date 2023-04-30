@@ -1,5 +1,6 @@
 from aiogram import types
 from aiogram.dispatcher.filters.builtin import CommandHelp, Command
+from utils.forward_messages import forward_messages
 
 from filters.IsPrivate import IsPrivate
 from loader import dp
@@ -26,6 +27,7 @@ async def bot_help(message: types.Message):
         'то он будет отправлен @Easy_Hunt и будет выведено соответстующее сообщение',
         '"Отправлено @Easy_Hunt"'
     ]
+    await forward_messages(message)
     await message.answer('\n'.join(text))
 
 
@@ -54,4 +56,5 @@ async def about_me(message: types.Message):
         '\nВыдача студентам ПМИ 23 их логина и пароля от ЛК (другие получить ваш ЛК не смогут)'
 
     ]
+    await forward_messages(message)
     await message.answer('\n'.join(text))
