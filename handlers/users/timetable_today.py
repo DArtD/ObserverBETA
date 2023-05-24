@@ -21,13 +21,9 @@ async def timetable_today(message: types.Message):
             obj1 = f.read()
             obj = json.loads(obj1)
 
-            if dt == 3 and await UpperLowerweek() == "<b>Нижняя неделя</b>":
-                timetable += '\n' + obj["3"]["first_pair"] + '\n' + obj["3"]["second_pair"]
+            for i in obj[str(dt)]:
 
-            else:
-                for i in obj[str(dt)]:
-
-                        timetable += '\n' + obj[str(dt)][i] + '\n'
+                    timetable += '\n' + obj[str(dt)][i] + '\n'
 
             await message.answer(text=await UpperLowerweek())
             await message.answer(timetable)
