@@ -20,4 +20,4 @@ async def timetable(message: types.Message):
                 timetable += '\n' + obj[i][y] + '\n'
 
         await forward_messages(message)
-        await message.answer(timetable)
+        await message.answer("Расписание <b><u>прошлого</b></u> семестра\n" + timetable)
