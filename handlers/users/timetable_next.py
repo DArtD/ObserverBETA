@@ -11,7 +11,7 @@ from loader import dp
 
 @dp.message_handler(Command('timetable_next'), IsPrivate())
 async def timetable_next(message: types.Message):
-    await message.answer(text="<b><u>Пары закончились</b></u>")
+    await message.answer(text="<b><u>Пары закончились</u></b>")
 
     # dt_day = datetime.datetime.today() + datetime.timedelta(hours=5)
     #

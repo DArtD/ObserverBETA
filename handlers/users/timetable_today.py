@@ -11,7 +11,7 @@ from loader import dp
 
 @dp.message_handler(Command('timetable_today'), IsPrivate())
 async def timetable_today(message: types.Message):
-    await message.answer(text="<b><u>Пары закончились</b></u>")
+    await message.answer(text="<b><u>Пары закончились</u></b>")
 
     # dt_day = datetime.datetime.today() + datetime.timedelta(hours=5)
     # dt = dt_day.weekday()
