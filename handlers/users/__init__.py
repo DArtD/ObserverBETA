@@ -3,6 +3,7 @@ from .timetable import dp
 from .timetable_today import dp
 from .timetable_next import dp
 from .timetable_edit import dp
+from .cmd_ban import dp
 from .get_list import dp
 from .get_list_tx import dp
 from .exams import dp

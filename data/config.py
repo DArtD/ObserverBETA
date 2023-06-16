@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-
+#"-859544611"
 group_chat = "-1001844038287"
 BOT_TOKEN = '6008950844:AAGZx5poYNOPH1EX-M50pBUsgmmQzqqbCMg'
 admin = '1982872796'
