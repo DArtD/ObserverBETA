@@ -6,6 +6,7 @@ from .timetable_edit import dp
 from .cmd_ban import dp
 from .get_list import dp
 from .get_list_tx import dp
+from .google_drive import dp
 from .exams import dp
 from .links import dp
 from .start import dp
