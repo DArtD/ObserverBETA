@@ -12,10 +12,6 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-# If modifying these scopes, delete the file token.json.
-
-
-
 @dp.message_handler(Command("list"), IsPrivate())
 async def Drive(message: types.Message):
     """Shows basic usage of the Drive v3 API.
